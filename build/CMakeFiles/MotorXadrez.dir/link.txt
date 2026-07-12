@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/MotorXadrez.dir/main.cpp.o CMakeFiles/MotorXadrez.dir/board.cpp.o -o MotorXadrez 

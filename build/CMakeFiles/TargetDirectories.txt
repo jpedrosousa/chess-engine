@@ -1,0 +1,3 @@
+/home/joao/Documentos/motor xadrez/build/CMakeFiles/chess_engine.dir
+/home/joao/Documentos/motor xadrez/build/CMakeFiles/edit_cache.dir
+/home/joao/Documentos/motor xadrez/build/CMakeFiles/rebuild_cache.dir
