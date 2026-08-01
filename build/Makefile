@@ -153,6 +153,30 @@ board.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/chess_engine.dir/build.make CMakeFiles/chess_engine.dir/board.cpp.s
 .PHONY : board.cpp.s
 
+evaluation.o: evaluation.cpp.o
+.PHONY : evaluation.o
+
+# target to build an object file
+evaluation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chess_engine.dir/build.make CMakeFiles/chess_engine.dir/evaluation.cpp.o
+.PHONY : evaluation.cpp.o
+
+evaluation.i: evaluation.cpp.i
+.PHONY : evaluation.i
+
+# target to preprocess a source file
+evaluation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chess_engine.dir/build.make CMakeFiles/chess_engine.dir/evaluation.cpp.i
+.PHONY : evaluation.cpp.i
+
+evaluation.s: evaluation.cpp.s
+.PHONY : evaluation.s
+
+# target to generate assembly for a file
+evaluation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chess_engine.dir/build.make CMakeFiles/chess_engine.dir/evaluation.cpp.s
+.PHONY : evaluation.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -177,6 +201,78 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/chess_engine.dir/build.make CMakeFiles/chess_engine.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+movegen.o: movegen.cpp.o
+.PHONY : movegen.o
+
+# target to build an object file
+movegen.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chess_engine.dir/build.make CMakeFiles/chess_engine.dir/movegen.cpp.o
+.PHONY : movegen.cpp.o
+
+movegen.i: movegen.cpp.i
+.PHONY : movegen.i
+
+# target to preprocess a source file
+movegen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chess_engine.dir/build.make CMakeFiles/chess_engine.dir/movegen.cpp.i
+.PHONY : movegen.cpp.i
+
+movegen.s: movegen.cpp.s
+.PHONY : movegen.s
+
+# target to generate assembly for a file
+movegen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chess_engine.dir/build.make CMakeFiles/chess_engine.dir/movegen.cpp.s
+.PHONY : movegen.cpp.s
+
+play.o: play.cpp.o
+.PHONY : play.o
+
+# target to build an object file
+play.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chess_engine.dir/build.make CMakeFiles/chess_engine.dir/play.cpp.o
+.PHONY : play.cpp.o
+
+play.i: play.cpp.i
+.PHONY : play.i
+
+# target to preprocess a source file
+play.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chess_engine.dir/build.make CMakeFiles/chess_engine.dir/play.cpp.i
+.PHONY : play.cpp.i
+
+play.s: play.cpp.s
+.PHONY : play.s
+
+# target to generate assembly for a file
+play.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chess_engine.dir/build.make CMakeFiles/chess_engine.dir/play.cpp.s
+.PHONY : play.cpp.s
+
+search.o: search.cpp.o
+.PHONY : search.o
+
+# target to build an object file
+search.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chess_engine.dir/build.make CMakeFiles/chess_engine.dir/search.cpp.o
+.PHONY : search.cpp.o
+
+search.i: search.cpp.i
+.PHONY : search.i
+
+# target to preprocess a source file
+search.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chess_engine.dir/build.make CMakeFiles/chess_engine.dir/search.cpp.i
+.PHONY : search.cpp.i
+
+search.s: search.cpp.s
+.PHONY : search.s
+
+# target to generate assembly for a file
+search.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chess_engine.dir/build.make CMakeFiles/chess_engine.dir/search.cpp.s
+.PHONY : search.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -189,9 +285,21 @@ help:
 	@echo "... board.o"
 	@echo "... board.i"
 	@echo "... board.s"
+	@echo "... evaluation.o"
+	@echo "... evaluation.i"
+	@echo "... evaluation.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... movegen.o"
+	@echo "... movegen.i"
+	@echo "... movegen.s"
+	@echo "... play.o"
+	@echo "... play.i"
+	@echo "... play.s"
+	@echo "... search.o"
+	@echo "... search.i"
+	@echo "... search.s"
 .PHONY : help
 
 

@@ -32,7 +32,6 @@ public:
 
     void initStartPosition();
 
-    // Lança std::invalid_argument se o FEN for malformado.
     void setFromFEN(const std::string& fen);
 
     std::string toFEN() const;
@@ -44,9 +43,13 @@ public:
     Piece& at(int file, int rank) { return squares[rank * 8 + file]; }
     const Piece& at(int file, int rank) const { return squares[rank * 8 + file]; }
 
+ 
     int kingSquare(Color c) const;
 
     int countPieces(Color c, PieceType t) const;
+
+    
+    Board makeMove(const struct Move& m) const;
 
     Color sideToMove = WHITE;
 
@@ -60,11 +63,12 @@ public:
     int halfmoveClock = 0;
     int fullmoveNumber = 1;
 
+    static int squareFromAlgebraic(const std::string& s);
+    static std::string algebraicFromSquare(int sq);
+
 private:
     std::array<Piece, 64> squares;
 
     static char pieceToChar(const Piece& p);
     static Piece charToPiece(char c);
-    static int squareFromAlgebraic(const std::string& s);
-    static std::string algebraicFromSquare(int sq);
 };

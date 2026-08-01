@@ -1,8 +1,16 @@
 file(REMOVE_RECURSE
   "CMakeFiles/chess_engine.dir/board.cpp.o"
   "CMakeFiles/chess_engine.dir/board.cpp.o.d"
+  "CMakeFiles/chess_engine.dir/evaluation.cpp.o"
+  "CMakeFiles/chess_engine.dir/evaluation.cpp.o.d"
   "CMakeFiles/chess_engine.dir/main.cpp.o"
   "CMakeFiles/chess_engine.dir/main.cpp.o.d"
+  "CMakeFiles/chess_engine.dir/movegen.cpp.o"
+  "CMakeFiles/chess_engine.dir/movegen.cpp.o.d"
+  "CMakeFiles/chess_engine.dir/play.cpp.o"
+  "CMakeFiles/chess_engine.dir/play.cpp.o.d"
+  "CMakeFiles/chess_engine.dir/search.cpp.o"
+  "CMakeFiles/chess_engine.dir/search.cpp.o.d"
   "chess_engine"
   "chess_engine.pdb"
 )

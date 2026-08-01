@@ -9,4 +9,8 @@ include_directories(include)
 add_executable(chess_engine
     main.cpp
     board.cpp
+    movegen.cpp
+    evaluation.cpp
+    search.cpp
+    play.cpp
 )

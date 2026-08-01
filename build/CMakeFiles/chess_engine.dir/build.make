@@ -97,19 +97,83 @@ CMakeFiles/chess_engine.dir/board.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chess_engine.dir/board.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/joao/Documentos/motor xadrez/board.cpp" -o CMakeFiles/chess_engine.dir/board.cpp.s
 
+CMakeFiles/chess_engine.dir/movegen.cpp.o: CMakeFiles/chess_engine.dir/flags.make
+CMakeFiles/chess_engine.dir/movegen.cpp.o: /home/joao/Documentos/motor\ xadrez/movegen.cpp
+CMakeFiles/chess_engine.dir/movegen.cpp.o: CMakeFiles/chess_engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/joao/Documentos/motor xadrez/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/chess_engine.dir/movegen.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chess_engine.dir/movegen.cpp.o -MF CMakeFiles/chess_engine.dir/movegen.cpp.o.d -o CMakeFiles/chess_engine.dir/movegen.cpp.o -c "/home/joao/Documentos/motor xadrez/movegen.cpp"
+
+CMakeFiles/chess_engine.dir/movegen.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chess_engine.dir/movegen.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/joao/Documentos/motor xadrez/movegen.cpp" > CMakeFiles/chess_engine.dir/movegen.cpp.i
+
+CMakeFiles/chess_engine.dir/movegen.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chess_engine.dir/movegen.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/joao/Documentos/motor xadrez/movegen.cpp" -o CMakeFiles/chess_engine.dir/movegen.cpp.s
+
+CMakeFiles/chess_engine.dir/evaluation.cpp.o: CMakeFiles/chess_engine.dir/flags.make
+CMakeFiles/chess_engine.dir/evaluation.cpp.o: /home/joao/Documentos/motor\ xadrez/evaluation.cpp
+CMakeFiles/chess_engine.dir/evaluation.cpp.o: CMakeFiles/chess_engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/joao/Documentos/motor xadrez/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/chess_engine.dir/evaluation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chess_engine.dir/evaluation.cpp.o -MF CMakeFiles/chess_engine.dir/evaluation.cpp.o.d -o CMakeFiles/chess_engine.dir/evaluation.cpp.o -c "/home/joao/Documentos/motor xadrez/evaluation.cpp"
+
+CMakeFiles/chess_engine.dir/evaluation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chess_engine.dir/evaluation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/joao/Documentos/motor xadrez/evaluation.cpp" > CMakeFiles/chess_engine.dir/evaluation.cpp.i
+
+CMakeFiles/chess_engine.dir/evaluation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chess_engine.dir/evaluation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/joao/Documentos/motor xadrez/evaluation.cpp" -o CMakeFiles/chess_engine.dir/evaluation.cpp.s
+
+CMakeFiles/chess_engine.dir/search.cpp.o: CMakeFiles/chess_engine.dir/flags.make
+CMakeFiles/chess_engine.dir/search.cpp.o: /home/joao/Documentos/motor\ xadrez/search.cpp
+CMakeFiles/chess_engine.dir/search.cpp.o: CMakeFiles/chess_engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/joao/Documentos/motor xadrez/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/chess_engine.dir/search.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chess_engine.dir/search.cpp.o -MF CMakeFiles/chess_engine.dir/search.cpp.o.d -o CMakeFiles/chess_engine.dir/search.cpp.o -c "/home/joao/Documentos/motor xadrez/search.cpp"
+
+CMakeFiles/chess_engine.dir/search.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chess_engine.dir/search.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/joao/Documentos/motor xadrez/search.cpp" > CMakeFiles/chess_engine.dir/search.cpp.i
+
+CMakeFiles/chess_engine.dir/search.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chess_engine.dir/search.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/joao/Documentos/motor xadrez/search.cpp" -o CMakeFiles/chess_engine.dir/search.cpp.s
+
+CMakeFiles/chess_engine.dir/play.cpp.o: CMakeFiles/chess_engine.dir/flags.make
+CMakeFiles/chess_engine.dir/play.cpp.o: /home/joao/Documentos/motor\ xadrez/play.cpp
+CMakeFiles/chess_engine.dir/play.cpp.o: CMakeFiles/chess_engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/joao/Documentos/motor xadrez/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/chess_engine.dir/play.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chess_engine.dir/play.cpp.o -MF CMakeFiles/chess_engine.dir/play.cpp.o.d -o CMakeFiles/chess_engine.dir/play.cpp.o -c "/home/joao/Documentos/motor xadrez/play.cpp"
+
+CMakeFiles/chess_engine.dir/play.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chess_engine.dir/play.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/joao/Documentos/motor xadrez/play.cpp" > CMakeFiles/chess_engine.dir/play.cpp.i
+
+CMakeFiles/chess_engine.dir/play.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chess_engine.dir/play.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/joao/Documentos/motor xadrez/play.cpp" -o CMakeFiles/chess_engine.dir/play.cpp.s
+
 # Object files for target chess_engine
 chess_engine_OBJECTS = \
 "CMakeFiles/chess_engine.dir/main.cpp.o" \
-"CMakeFiles/chess_engine.dir/board.cpp.o"
+"CMakeFiles/chess_engine.dir/board.cpp.o" \
+"CMakeFiles/chess_engine.dir/movegen.cpp.o" \
+"CMakeFiles/chess_engine.dir/evaluation.cpp.o" \
+"CMakeFiles/chess_engine.dir/search.cpp.o" \
+"CMakeFiles/chess_engine.dir/play.cpp.o"
 
 # External object files for target chess_engine
 chess_engine_EXTERNAL_OBJECTS =
 
 chess_engine: CMakeFiles/chess_engine.dir/main.cpp.o
 chess_engine: CMakeFiles/chess_engine.dir/board.cpp.o
+chess_engine: CMakeFiles/chess_engine.dir/movegen.cpp.o
+chess_engine: CMakeFiles/chess_engine.dir/evaluation.cpp.o
+chess_engine: CMakeFiles/chess_engine.dir/search.cpp.o
+chess_engine: CMakeFiles/chess_engine.dir/play.cpp.o
 chess_engine: CMakeFiles/chess_engine.dir/build.make
 chess_engine: CMakeFiles/chess_engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/joao/Documentos/motor xadrez/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable chess_engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/joao/Documentos/motor xadrez/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable chess_engine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/chess_engine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

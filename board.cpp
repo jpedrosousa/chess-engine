@@ -1,8 +1,13 @@
 #include "board.h"
+#include "move.h"
 #include <iostream>
 #include <sstream>
 #include <cctype>
 #include <stdexcept>
+
+namespace {
+    constexpr int A1 = 0, H1 = 7, A8 = 56, H8 = 63;
+}
 
 Board::Board() {
     squares.fill(Piece{});
@@ -170,6 +175,62 @@ int Board::countPieces(Color c, PieceType t) const {
         if (p.type == t && p.color == c) count++;
     }
     return count;
+}
+
+Board Board::makeMove(const Move& m) const {
+    Board nb = *this;
+    Piece moving = nb.at(m.from);
+    Color us = moving.color;
+    Color them = (us == WHITE) ? BLACK : WHITE;
+
+    if (m.isEnPassant) {
+        int capturedSq = (us == WHITE) ? m.to - 8 : m.to + 8;
+        nb.at(capturedSq) = Piece{};
+    }
+
+    nb.at(m.to) = moving;
+    nb.at(m.from) = Piece{};
+
+    if (m.promotion != EMPTY) {
+        nb.at(m.to).type = m.promotion;
+    }
+
+    if (m.isCastleKingside) {
+        int rookFrom = (us == WHITE) ? H1 : H8;
+        int rookTo   = rookFrom - 2; // g1->f1 é rookFrom-1... na verdade h1(7)->f1(5) = rookFrom-2
+        nb.at(rookTo) = nb.at(rookFrom);
+        nb.at(rookFrom) = Piece{};
+    } else if (m.isCastleQueenside) {
+        int rookFrom = (us == WHITE) ? A1 : A8;
+        int rookTo   = rookFrom + 3; // a1(0)->d1(3)
+        nb.at(rookTo) = nb.at(rookFrom);
+        nb.at(rookFrom) = Piece{};
+    }
+
+    nb.enPassantSquare = m.isDoublePawnPush
+        ? (us == WHITE ? m.from + 8 : m.from - 8)
+        : -1;
+
+    if (moving.type == KING) {
+        if (us == WHITE) { nb.whiteCanCastleKingside = false; nb.whiteCanCastleQueenside = false; }
+        else             { nb.blackCanCastleKingside = false; nb.blackCanCastleQueenside = false; }
+    }
+    auto clearRookRight = [&](int square) {
+        if (square == A1) nb.whiteCanCastleQueenside = false;
+        if (square == H1) nb.whiteCanCastleKingside  = false;
+        if (square == A8) nb.blackCanCastleQueenside = false;
+        if (square == H8) nb.blackCanCastleKingside  = false;
+    };
+    clearRookRight(m.from);
+    clearRookRight(m.to); 
+    
+    if (moving.type == PAWN || m.isCapture || m.isEnPassant) nb.halfmoveClock = 0;
+    else nb.halfmoveClock++;
+
+    if (us == BLACK) nb.fullmoveNumber++;
+
+    nb.sideToMove = them;
+    return nb;
 }
 
 void Board::print() const {

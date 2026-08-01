@@ -224,24 +224,6 @@ ChessEngine_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 ChessEngine_SOURCE_DIR:STATIC=/home/joao/Documentos/motor xadrez
 
-//Value Computed by CMake
-MotorXadrez_BINARY_DIR:STATIC=/home/joao/Documentos/motor xadrez/build
-
-//Value Computed by CMake
-MotorXadrez_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-MotorXadrez_SOURCE_DIR:STATIC=/home/joao/Documentos/motor xadrez
-
-//Value Computed by CMake
-Project_BINARY_DIR:STATIC=/home/joao/Documentos/motor xadrez/build
-
-//Value Computed by CMake
-Project_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-Project_SOURCE_DIR:STATIC=/home/joao/Documentos/motor xadrez
-
 
 ########################
 # INTERNAL cache entries
