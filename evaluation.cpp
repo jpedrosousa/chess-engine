@@ -1,9 +1,7 @@
 #include "evaluation.h"
 
 namespace {
-    // Tabelas escritas em ordem "visual" (linha 0 = fileira 8, linha 7 = fileira 1),
-    // do ponto de vista das brancas. Convenção padrão usada na maioria dos motores.
-
+    
     constexpr int pawnPST[64] = {
          0,  0,  0,  0,  0,  0,  0,  0,
         50, 50, 50, 50, 50, 50, 50, 50,
@@ -59,7 +57,6 @@ namespace {
         -20,-10,-10, -5, -5,-10,-10,-20
     };
 
-    // Rei em fase de abertura/meio-jogo: prioriza segurança (cantos, atrás de peões).
     constexpr int kingMiddlegamePST[64] = {
         -30,-40,-40,-50,-50,-40,-40,-30,
         -30,-40,-40,-50,-50,-40,-40,-30,
@@ -84,12 +81,7 @@ int Evaluation::pieceValue(PieceType t) {
 }
 
 int Evaluation::pstValue(PieceType t, Color c, int square) {
-    // As tabelas acima estão escritas com a fileira 8 na linha 0 (visão das brancas).
-    // Nosso Board usa square = rank*8+file com a1 = 0 (fileira 1 embaixo).
-    // Para peças brancas, square^56 espelha a fileira e cai direto na tabela.
-    // Para peças pretas, o square "cru" já corresponde à casa espelhada equivalente
-    // (ex: peão preto perto da promoção em rank2 cai na mesma linha de bônus alto
-    // que o peão branco perto da promoção em rank7).
+    
     int idx = (c == WHITE) ? (square ^ 56) : square;
 
     switch (t) {
