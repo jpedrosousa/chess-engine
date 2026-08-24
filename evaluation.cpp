@@ -1,7 +1,7 @@
 #include "evaluation.h"
-
+ 
 namespace {
-    
+ 
     constexpr int pawnPST[64] = {
          0,  0,  0,  0,  0,  0,  0,  0,
         50, 50, 50, 50, 50, 50, 50, 50,
@@ -12,7 +12,7 @@ namespace {
          5, 10, 10,-20,-20, 10, 10,  5,
          0,  0,  0,  0,  0,  0,  0,  0
     };
-
+ 
     constexpr int knightPST[64] = {
         -50,-40,-30,-30,-30,-30,-40,-50,
         -40,-20,  0,  0,  0,  0,-20,-40,
@@ -23,7 +23,7 @@ namespace {
         -40,-20,  0,  5,  5,  0,-20,-40,
         -50,-40,-30,-30,-30,-30,-40,-50
     };
-
+ 
     constexpr int bishopPST[64] = {
         -20,-10,-10,-10,-10,-10,-10,-20,
         -10,  0,  0,  0,  0,  0,  0,-10,
@@ -34,7 +34,7 @@ namespace {
         -10,  5,  0,  0,  0,  0,  5,-10,
         -20,-10,-10,-10,-10,-10,-10,-20
     };
-
+ 
     constexpr int rookPST[64] = {
          0,  0,  0,  0,  0,  0,  0,  0,
          5, 10, 10, 10, 10, 10, 10,  5,
@@ -45,7 +45,7 @@ namespace {
         -5,  0,  0,  0,  0,  0,  0, -5,
          0,  0,  0,  5,  5,  0,  0,  0
     };
-
+ 
     constexpr int queenPST[64] = {
         -20,-10,-10, -5, -5,-10,-10,-20,
         -10,  0,  0,  0,  0,  0,  0,-10,
@@ -56,7 +56,7 @@ namespace {
         -10,  0,  5,  0,  0,  0,  0,-10,
         -20,-10,-10, -5, -5,-10,-10,-20
     };
-
+ 
     constexpr int kingMiddlegamePST[64] = {
         -30,-40,-40,-50,-50,-40,-40,-30,
         -30,-40,-40,-50,-50,-40,-40,-30,
@@ -68,7 +68,7 @@ namespace {
          20, 30, 10,  0,  0, 10, 30, 20
     };
 }
-
+ 
 int Evaluation::pieceValue(PieceType t) {
     switch (t) {
         case PAWN:   return 100;
@@ -79,22 +79,22 @@ int Evaluation::pieceValue(PieceType t) {
         default:     return 0;
     }
 }
-
+ 
 int Evaluation::pstValue(PieceType t, Color c, int square) {
-    
     int idx = (c == WHITE) ? (square ^ 56) : square;
+ 
 
     switch (t) {
-        case PAWN:   return pawnPST[idx];
-        case KNIGHT: return knightPST[idx];
-        case BISHOP: return bishopPST[idx];
-        case ROOK:   return rookPST[idx];
-        case QUEEN:  return queenPST[idx];
-        case KING:   return kingMiddlegamePST[idx];
+        case PAWN:   return static_cast<int>(pawnPST[idx] * 1.3);
+        case KNIGHT: return static_cast<int>(knightPST[idx] * 0.85);
+        case BISHOP: return static_cast<int>(bishopPST[idx] * 1.2);
+        case ROOK:   return static_cast<int>(rookPST[idx] * 1.1);
+        case QUEEN:  return static_cast<int>(queenPST[idx] * 1.2);
+        case KING:   return static_cast<int>(kingMiddlegamePST[idx] * 1.3);
         default:     return 0;
     }
 }
-
+ 
 int Evaluation::evaluate(const Board& board) {
     int score = 0;
     for (int sq = 0; sq < 64; sq++) {
@@ -105,3 +105,4 @@ int Evaluation::evaluate(const Board& board) {
     }
     return score;
 }
+ 
