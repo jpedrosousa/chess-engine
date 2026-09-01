@@ -51,6 +51,8 @@ public:
     
     Board makeMove(const struct Move& m) const;
 
+    Board makeNullMove() const;
+
     Color sideToMove = WHITE;
 
     bool whiteCanCastleKingside  = true;

@@ -13,4 +13,6 @@ add_executable(chess_engine
     evaluation.cpp
     search.cpp
     play.cpp
+    zobrist.cpp
+    tt.cpp
 )

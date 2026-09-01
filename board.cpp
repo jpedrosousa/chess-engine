@@ -197,7 +197,7 @@ Board Board::makeMove(const Move& m) const {
 
     if (m.isCastleKingside) {
         int rookFrom = (us == WHITE) ? H1 : H8;
-        int rookTo   = rookFrom - 2; // g1->f1 é rookFrom-1... na verdade h1(7)->f1(5) = rookFrom-2
+        int rookTo   = rookFrom - 2; 
         nb.at(rookTo) = nb.at(rookFrom);
         nb.at(rookFrom) = Piece{};
     } else if (m.isCastleQueenside) {
@@ -230,6 +230,15 @@ Board Board::makeMove(const Move& m) const {
     if (us == BLACK) nb.fullmoveNumber++;
 
     nb.sideToMove = them;
+    return nb;
+}
+
+Board Board::makeNullMove() const {
+    Board nb = *this;
+    nb.sideToMove = (sideToMove == WHITE) ? BLACK : WHITE;
+    nb.enPassantSquare = -1;
+    nb.halfmoveClock++;
+    if (sideToMove == BLACK) nb.fullmoveNumber++;
     return nb;
 }
 
