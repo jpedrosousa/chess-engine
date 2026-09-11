@@ -13,6 +13,7 @@ struct TTEntry {
     Move bestMove;
     bool valid = false;
 };
+
 class TranspositionTable {
 public:
     explicit TranspositionTable(size_t sizeMB = 32);

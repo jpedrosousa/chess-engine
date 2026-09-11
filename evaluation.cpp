@@ -70,7 +70,7 @@ namespace {
          20, 30, 10,  0,  0, 10, 30, 20
     };
 
- 
+
     struct EvalParams {
         double matN = 320, matB = 330, matR = 500, matQ = 900;
         double scalePawn = 1.3, scaleKnight = 0.85, scaleBishop = 1.2,
@@ -79,13 +79,13 @@ namespace {
 
     EvalParams params;
 
-} 
+}
 
 bool Evaluation::loadParams(const std::string& path) {
     std::ifstream in(path);
     if (!in.is_open()) return false;
 
-    EvalParams p = params; 
+    EvalParams p = params;
     std::string line;
     while (std::getline(in, line)) {
         size_t eq = line.find('=');

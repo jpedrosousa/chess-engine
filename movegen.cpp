@@ -37,7 +37,7 @@ void MoveGenerator::generatePawnMoves(const Board& board, int sq, const Piece& p
             Move m; m.from = sq; m.to = to;
             out.push_back(m);
 
-           
+
             int twoR = r + 2 * dir;
             if (r == startRank && board.at(f, twoR).isEmpty()) {
                 Move m2; m2.from = sq; m2.to = sqOf(f, twoR); m2.isDoublePawnPush = true;
@@ -109,7 +109,7 @@ void MoveGenerator::generateSlidingMoves(const Board& board, int sq, const Piece
                         Move m; m.from = sq; m.to = sqOf(nf, nr); m.isCapture = true;
                         out.push_back(m);
                     }
-                    break; 
+                    break;
                 }
                 nf += dirsArr[i][0];
                 nr += dirsArr[i][1];
@@ -195,7 +195,7 @@ std::vector<Move> MoveGenerator::generatePseudoLegalMoves(const Board& board) {
 bool MoveGenerator::isSquareAttacked(const Board& board, int square, Color bySide) {
     int f = fileOf(square), r = rankOf(square);
 
-    int pawnDir = (bySide == WHITE) ? -1 : 1; 
+    int pawnDir = (bySide == WHITE) ? -1 : 1;
     for (int df : {-1, 1}) {
         int af = f + df, ar = r + pawnDir;
         if (onBoard(af, ar)) {
@@ -256,7 +256,7 @@ bool MoveGenerator::isSquareAttacked(const Board& board, int square, Color bySid
 
 bool MoveGenerator::inCheck(const Board& board, Color side) {
     int kingSq = board.kingSquare(side);
-    if (kingSq == -1) return false; 
+    if (kingSq == -1) return false;
     Color opp = (side == WHITE) ? BLACK : WHITE;
     return isSquareAttacked(board, kingSq, opp);
 }
@@ -270,7 +270,7 @@ std::vector<Move> MoveGenerator::generateLegalMoves(const Board& board) {
 
         Board next = board.makeMove(m);
         int kingSq = next.kingSquare(us);
-        if (kingSq == -1) continue; 
+        if (kingSq == -1) continue;
         if (!isSquareAttacked(next, kingSq, opp)) {
             legal.push_back(m);
         }

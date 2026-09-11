@@ -20,9 +20,9 @@ bool TranspositionTable::probe(uint64_t key, int depth, int alpha, int beta, int
     const TTEntry* e = find(key);
     if (!e) return false;
 
-    outMove = e->bestMove; 
+    outMove = e->bestMove;
 
-    if (e->depth < depth) return false; 
+    if (e->depth < depth) return false;
 
     switch (e->flag) {
         case TTFlag::EXACT:

@@ -16,3 +16,19 @@ add_executable(chess_engine
     zobrist.cpp
     tt.cpp
 )
+
+add_executable(generate_data
+    generate_data.cpp
+    board.cpp
+    movegen.cpp
+    evaluation.cpp
+    search.cpp
+    zobrist.cpp
+    tt.cpp
+)
+
+add_executable(tune
+    tune.cpp
+    board.cpp
+    movegen.cpp
+)

@@ -8,7 +8,7 @@
 struct SearchResult {
     Move bestMove;
     int score = 0;
-    int depthReached = 0; 
+    int depthReached = 0;
 };
 
 class Search {

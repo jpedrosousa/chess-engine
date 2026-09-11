@@ -112,7 +112,7 @@ int Search::negamax(const Board& board, int depth, int alpha, int beta, int ply,
     int origAlpha = alpha;
     uint64_t key = Zobrist::computeHash(board);
 
-    Move ttMove; 
+    Move ttMove;
     if (depth > 0) {
         int ttScore;
         if (st.tt.probe(key, depth, alpha, beta, ttScore, ttMove)) {
