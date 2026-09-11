@@ -46,7 +46,6 @@ namespace {
         return board.at(m.to).type;
     }
 
-    // Ordena so capturas por MVV-LVA. Usado na quiescence, onde so existem capturas.
     void orderCapturesOnly(const Board& board, std::vector<Move>& captures) {
         std::stable_sort(captures.begin(), captures.end(), [&](const Move& a, const Move& b) {
             int scoreA = pieceOrderValue(capturedPieceType(board, a)) * 16 - pieceOrderValue(board.at(a.from).type);
